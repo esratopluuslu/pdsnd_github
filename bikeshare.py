@@ -21,6 +21,7 @@ def get_filters():
     city = ""
     month = "all"
     day = "all"
+    # user prompt for selecting the city
     while True: 
         city = input("Please enter the city you want to analyze (eg. chicago): ")
         city = city.lower()
