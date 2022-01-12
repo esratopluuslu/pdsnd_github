@@ -1,6 +1,7 @@
 import time
-import pandas as pd
+
 import numpy as np
+import pandas as pd
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
@@ -46,7 +47,7 @@ def get_filters():
     return city, month, day
 
 
-def load_data(city, month, day):
+def read_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
 
@@ -182,7 +183,7 @@ def user_stats(df):
 def main():
     while True:
         city, month, day = get_filters()
-        df = load_data(city, month, day)
+        df = read_data(city, month, day)
 
         time_stats(df)
         station_stats(df)
